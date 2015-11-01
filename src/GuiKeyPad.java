@@ -59,4 +59,8 @@ public class GuiKeyPad extends Panel
   {
     return names[i];
   }
+  public int getInput ()
+  {
+    return 0; 
+  }
 }

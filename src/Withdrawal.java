@@ -2,15 +2,15 @@
 public class Withdrawal extends Transaction
 {
   private int amount;		// amount to withdraw
-  private Keypad keypad;	// reference to keypad
+  private GuiKeyPad keypad;	// reference to keypad
   private CashDispenser cashDispenser;	// reference to cash dispenser
 
   // constant corresponding to menu option to cancel
   private final static int CANCELED = 6;
 
   // Withdrawal constructor
-  public Withdrawal (int userAccountNumber, Screen atmScreen,
-		     BankDatabase atmBankDatabase, Keypad atmKeypad,
+  public Withdrawal (int userAccountNumber, GuiScreen atmScreen,
+		     BankDatabase atmBankDatabase, GuiKeyPad atmKeypad,
 		     CashDispenser atmCashDispenser)
   {
     // initialize superclass variables
@@ -29,7 +29,7 @@ public class Withdrawal extends Transaction
 
     // get references to bank database and screen
     BankDatabase bankDatabase = getBankDatabase ();
-    Screen screen = getScreen ();
+    GuiScreen screen = getScreen ();
 
     // loop until cash is dispensed or the user cancels
     do
@@ -89,7 +89,7 @@ public class Withdrawal extends Transaction
   {
     int userChoice = 0;		// local variable to store return value
 
-    Screen screen = getScreen ();	// get screen reference
+    GuiScreen screen = getScreen ();	// get screen reference
 
     // array of amounts to correspond to menu numbers
     int[] amounts = { 0, 20, 40, 60, 100, 200 };

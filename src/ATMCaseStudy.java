@@ -1,5 +1,4 @@
 import javax.swing.JFrame;
-class GuiATM;
 
 public class ATMCaseStudy
 {
